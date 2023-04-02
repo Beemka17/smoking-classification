@@ -1,9 +1,11 @@
 import pickle
 import streamlit as st
 
-smoking_model = pickle.load(open('smoking_model.sav','rb'))
+smoking_model = pickle.load(open('smoking_lr.sav','rb'))
 
 st.title('Prediksi Perilaku Merokok Berdasarkan Kondisi Kesehatan')
+st.caption('Bagus Mauludi Kusuma | 03/04/2023')
+st.write('\n')
 
 col1, col2=st.columns(2)
 with col1:
@@ -68,3 +70,4 @@ if st.button('Test Perilaku Merokok Pasien') :
         smoking_diagnosis = 'Pasien Perokok'
 
     st.success(smoking_diagnosis)
+    
